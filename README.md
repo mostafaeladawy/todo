@@ -35,7 +35,7 @@ This application follows a clean architecture with clear separation between the 
 ### Acceptance Criteria:
 - Basic CRUD operations work, and each user manages their own ToDo items.
 
-### Level 2: Error Handling, Validation, and Enhancements
+## Level 2: Error Handling, Validation, and Enhancements
 #### 1. Input Validation
 - Implement validation for user inputs such as non-empty titles, valid due dates, and length limits on descriptions.
 - Ensure meaningful error messages are returned to the user when inputs are invalid.
@@ -57,7 +57,7 @@ This application follows a clean architecture with clear separation between the 
 - Users can archive and restore tasks.
 - Archived tasks are not shown in the main list by default but can be retrieved if necessary.
 
-### Level 3: Business Logic and Advanced Validation
+## Level 3: Business Logic and Advanced Validation
 #### 1. Task Deadlines and Overdue Validation
 - Implement business logic to prevent setting due dates in the past.
 - When displaying ToDo items, mark overdue tasks with a special status (e.g., "overdue").
