@@ -4,14 +4,14 @@ This application offers users the ability to manage tasks effectively, while als
 
 ## Project Structure
 
-This application follows a clean architecture with clear separation between the following layers:
+This application follows the **MVC** (Model-View-Controller) architecture, which separates concerns into three distinct layers:
 
-1. Handler Layer: Handles incoming HTTP requests, processes them, and returns responses.
-2. Use Case Layer: Implements the business logic and interactions between components.
-3. Repository Layer: Handles communication with the database, following repository patterns.
-4. Domain Layer: Contains the core entities and domain-specific logic.
-5. Middleware Layer: Manages authentication and authorization processes.
-
+1. Model Layer:
+- Responsible for representing the application's data and the business logic. This layer interacts with the database, performing data manipulation and validation through models.
+2. View Layer:
+- Handles the presentation of data to the user. In this case, since the project is an API, the view corresponds to the JSON responses returned to the client.
+3. Controller Layer:
+- Acts as an intermediary between the Model and the View. The controllers receive HTTP requests, invoke the appropriate logic from the model layer, and return data in the form of JSON responses to the client.
 
 ## Technologies Used
 
@@ -57,18 +57,3 @@ This application follows a clean architecture with clear separation between the 
 - Users can archive and restore tasks.
 - Archived tasks are not shown in the main list by default but can be retrieved if necessary.
 
-## Level 3: Business Logic and Advanced Validation
-#### 1. Task Deadlines and Overdue Validation
-- Implement business logic to prevent setting due dates in the past.
-- When displaying ToDo items, mark overdue tasks with a special status (e.g., "overdue").
-#### Acceptance Criteria:
-- Users cannot create or update a ToDo with a past due date.
-- Overdue tasks are visually marked in the response.
-
-#### 2. Task Completion and Statuses
-- Add a completed status to each ToDo item, allowing users to mark a task as completed or incomplete.
-- Ensure validation logic to prevent modifying completed tasks unless reverting to incomplete.
-
-#### Acceptance Criteria:
-- Users can toggle between completed and incomplete statuses.
-- Completed tasks cannot be modified, except to change their status back to incomplete.
